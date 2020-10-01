@@ -1,60 +1,70 @@
+// Base resolution Macbook 13"
 body{
-    margin-top: 10%;
+    max-width: 100%;
+    overflow: hidden;
     background-color: white;
     font-family: 'Roboto', sans-serif;
 }
+
 .heading{
     font-weight: bold;
 }
+
 .body__container{
+    display: grid;
     height: 100vh;
     width: 100%;
 }
+
 .orange__background{
     height: 200px;
     width: 80%;
     background-color: #F57F31;
-    margin: 5% 10% 0 10%;
+    margin: 0% 10% 0 10%;
+    border-radius: 25px;
+}
+
+//slider arrows
+.orange__background .next{
     position: absolute;
-    border-radius: 25px;
+    top: 60vh;
+    width: 5%;
+    right: 40%;
+    font-size: 1.5em;
 }
+
+.orange__background .prev{
+    position: absolute;
+    top: 60vh;
+    width: 5%;
+    left: 40%;
+    font-size: 1.5em;
+}
+
 .user__tag--container{
-    display: grid;
-    grid-template-columns: repeat(4, 300px);
-    grid-gap: 50px;
-    width: 100%;
-    align-items: center;
-    height: 200px;
-    box-sizing: border-box;
-    float: inline-start;
+    position: absolute;
+    height: 80vh;
+    width: 100vw;
+    max-width: 120vw;
+    .user__tag{
+        display: grid;
+        float: left;
+        height: 200px;
+        width: 50%;
+        position: relative;
+        margin: 100px 10px 0;
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0px 10px 8px 0px rgba(209,209,209,1);
+        border-radius: 25px;
+        padding-left: -20%;
+    }
 }
 
-.slick-slide{
-    width: 100%;
+.user__tag--container .user__tag{
+    width: 35vw !important;
 }
 
-.user__tag{
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: 20px 40px 30px 60px;
-    width: 300px;
-    height: 200px;
-    position: relative;
-    margin: 20vh 0 0 50vh;
-    background-color: rgb(242, 242, 242);
-    border: 2px solid rgb(250, 192, 17);
-    border-radius: 25px;
-    padding-right: 10px;
-    background-repeat: repeat-x;
-}
-
-.slick-initialized .slick-slide{
-    width: 100%;
-    box-sizing: border-box 
-}
 .user__tag--photo{
-    /* Oval */
-
     position: absolute;
     left: 8%;
     right: 0%;
@@ -62,8 +72,8 @@ body{
     bottom: 40%;
     width: 50px;
     grid-row: 1;
-
 }
+
 .user__tag--name{
     grid-column: 1;
     grid-row: 2;
@@ -72,12 +82,14 @@ body{
     font-weight: 500;
     color: #F57F31;
 }
+
 .user__tag--rating{
     grid-column: 2;
     grid-row: 2;
     margin: 20px 20px 0 20px;
     height: 15px;
 }
+
 .user__tag--subheading{
     grid-column: 1;
     grid-row: 3;
@@ -85,15 +97,62 @@ body{
     height: 15px;
     font-weight: 400;
 }
+
 .content__container{
-    width: 290px;
+    width: 100%;
     grid-column: 1 / span 2;
     grid-row: 4;
+    .content{
+        font-size: 14px;
+        width: 235px;
+        margin: 0 20px 0 20px;
+        font-weight: 300;
+        line-height: 1.6;
+    }
 }
-.content{
-    font-size: 14px;
-    width: 235px;
-    margin: 0 20px 0 20px;
-    font-weight: 300;
-    line-height: 1.6;
-}
+
+//Large screens 1281+
+@media (min-width: 1281px) {
+  
+    .user__tag--container .user__tag{
+        width: 20vw!important;
+    } 
+  }
+
+//Laptops, Desktop PC 1025-1280
+@media (min-width: 1025px) and (max-width: 1280px) {
+
+    .user__tag--container .user__tag{
+        min-width: 25vw!important;
+        max-width: 26vw!important;
+        display: grid;
+        float: left;
+    }
+  }
+
+  //Phones
+  @media (min-width: 320px) and (max-width: 480px) {
+      body{
+        overflow: hidden;
+      }
+
+      .heading{
+          width: 80vw;
+      }
+
+      .orange__background{
+        width: 80vw;
+      }
+
+      .user__tag--container{
+          min-width: 200vw;
+          width: 210vw !important;
+          height: 350px;
+          overflow: hidden;
+      }
+
+    .user__tag--container .user__tag{
+        display: grid;
+        width: 70vw!important;
+    }
+  }

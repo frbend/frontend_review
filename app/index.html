@@ -6,64 +6,60 @@
     <title>Reviews</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/styles.css">
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"/>
+    <script src="https://kit.fontawesome.com/b5a901b5ee.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <h1 class="heading">What 400+ review say about us</h2>
+    <h1 class="heading">What 400+ reviews say about us</h2>
     <div class="body__container">
         <div class="orange__background">
             <div class="user__tag--container">
-                <div class="user__tag">
-                    <img class="user__tag--photo" src="./images/natalia.png" alt="">
-                    <h5 class="user__tag--name">Navn navnsen1</h5>
-                    <p class="user__tag--rating">aaaaa</p>
-                    <h6 class="user__tag--subheading">Virksomhedsejer</h6>
-                    <div class="content__container">
-                        <p class="content">Det nye website blev lanceret i februar 2018 og allerede inden for de første 6 måneder var konverteringerne steget mere end 150%.</p>
+                <div class="slick__wrapper">
+                    <div class="user__tag">
+                        <img class="user__tag--photo" src="./images/natalia.png" alt="">
+                        <h5 class="user__tag--name">Navn navnsen1</h5>
+                        <p class="user__tag--rating">aaaaa</p>
+                        <h6 class="user__tag--subheading">Virksomhedsejer</h6>
+                        <div class="content__container">
+                            <p class="content">Det nye website blev lanceret i februar 2018 og allerede inden for de første 6 måneder var konverteringerne steget mere end 150%.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="user__tag">
-                    <img class="user__tag--photo" src="./images/natalia.png" alt="">
-                    <h5 class="user__tag--name">Navn navnsen2</h5>
-                    <p class="user__tag--rating">aaaaa</p>
-                    <h6 class="user__tag--subheading">Virksomhedsejer</h6>
-                    <div class="content__container">
-                        <p class="content">Det nye website blev lanceret i februar 2018 og allerede inden for de første 6 måneder var konverteringerne steget mere end 150%.</p>
+                    <div class="user__tag">
+                        <img class="user__tag--photo" src="./images/natalia.png" alt="">
+                        <h5 class="user__tag--name">Navn navnsen2</h5>
+                        <p class="user__tag--rating">aaaaa</p>
+                        <h6 class="user__tag--subheading">Virksomhedsejer</h6>
+                        <div class="content__container">
+                            <p class="content">Det nye website blev lanceret i februar 2018 og allerede inden for de første 6 måneder var konverteringerne steget mere end 150%.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="user__tag">
-                    <img class="user__tag--photo" src="./images/natalia.png" alt="">
-                    <h5 class="user__tag--name">Navn navnsen3</h5>
-                    <p class="user__tag--rating">aaaaa</p>
-                    <h6 class="user__tag--subheading">Virksomhedsejer</h6>
-                    <div class="content__container">
-                        <p class="content">Det nye website blev lanceret i februar 2018 og allerede inden for de første 6 måneder var konverteringerne steget mere end 150%.</p>
+                    <div class="user__tag">
+                        <img class="user__tag--photo" src="./images/natalia.png" alt="">
+                        <h5 class="user__tag--name">Navn navnsen3</h5>
+                        <p class="user__tag--rating">aaaaa</p>
+                        <h6 class="user__tag--subheading">Virksomhedsejer</h6>
+                        <div class="content__container">
+                            <p class="content">Det nye website blev lanceret i februar 2018 og allerede inden for de første 6 måneder var konverteringerne steget mere end 150%.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="user__tag">
-                    <img class="user__tag--photo" src="./images/natalia.png" alt="">
-                    <h5 class="user__tag--name">Navn navnsen4</h5>
-                    <p class="user__tag--rating">aaaaa</p>
-                    <h6 class="user__tag--subheading">Virksomhedsejer</h6>
-                    <div class="content__container">
-                        <p class="content">Det nye website blev lanceret i februar 2018 og allerede inden for de første 6 måneder var konverteringerne steget mere end 150%.</p>
+                    <div class="user__tag">
+                        <img class="user__tag--photo" src="./images/natalia.png" alt="">
+                        <h5 class="user__tag--name">Navn navnsen4</h5>
+                        <p class="user__tag--rating">aaaaa</p>
+                        <h6 class="user__tag--subheading">Virksomhedsejer</h6>
+                        <div class="content__container">
+                            <p class="content">Det nye website blev lanceret i februar 2018 og allerede inden for de første 6 måneder var konverteringerne steget mere end 150%.</p>
+                        </div>
                     </div>
                 </div>
             </div>
+            <i class="fas fa-chevron-left prev"></i>
+            <i class="fas fa-chevron-right next"></i>
         </div>
     </div>
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            $('.user__tag--container').slick({
-                dots: true,
-                infinite: true,
-                slidesToShow: 2,
-        })
-    })
-    </script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 </html>
